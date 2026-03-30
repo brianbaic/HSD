@@ -1,0 +1,164 @@
+{
+  "notes": "",
+  "services": [
+    {
+      "name": "Unraid",
+      "description": "Server dashboard",
+      "port": "",
+      "path": "",
+      "url": "https://unraid.rekabs.com"
+    },
+    {
+      "name": "Pihole",
+      "description": "DNS filtering",
+      "port": "8080",
+      "path": "",
+      "url": "https://pihole.unraid.rekabs.com"
+    },
+    {
+      "name": "NPM",
+      "description": "Nginx Proxy Manager",
+      "port": "81",
+      "path": "",
+      "url": "https://npm.unraid.rekabs.com"
+    },
+    {
+      "name": "Duplicacy",
+      "description": "Backup management",
+      "port": "3875",
+      "path": "",
+      "url": "https://duplicacy.unraid.rekabs.com"
+    },
+    {
+      "name": "Sonarr",
+      "description": "TV automation",
+      "port": "8989",
+      "path": "",
+      "url": "https://sonarr.unraid.rekabs.com"
+    },
+    {
+      "name": "Radarr",
+      "description": "Movie automation",
+      "port": "7878",
+      "path": "",
+      "url": "https://radarr.unraid.rekabs.com"
+    },
+    {
+      "name": "Prowlarr",
+      "description": "Indexer manager",
+      "port": "9696",
+      "path": "",
+      "url": "https://prowlarr.unraid.rekabs.com"
+    },
+    {
+      "name": "Tdarr",
+      "description": "Media transcoding",
+      "port": "8265",
+      "path": "",
+      "url": "https://tdarr.unraid.rekabs.com"
+    },
+    {
+      "name": "SABnzbd",
+      "description": "Usenet downloads",
+      "port": "8085",
+      "path": "",
+      "url": "https://sabnzbd.unraid.rekabs.com/"
+    },
+    {
+      "name": "qBittorrent",
+      "description": "Torrent client",
+      "port": "8081",
+      "path": "",
+      "url": "https://qbit.unraid.rekabs.com"
+    },
+    {
+      "name": "Jellyfin",
+      "description": "Media streaming",
+      "port": "8096",
+      "path": "",
+      "url": "https://jellyfin.unraid.rekabs.com"
+    },
+    {
+      "name": "Jellyseerr",
+      "description": "Media requests",
+      "port": "5055",
+      "path": "",
+      "url": "https://jellyseerr.unraid.rekabs.com"
+    },
+    {
+      "name": "Jellystat",
+      "description": "Playback analytics",
+      "port": "3001",
+      "path": "",
+      "url": "https://jellystat.unraid.rekabs.com"
+    },
+    {
+      "name": "Jellysweep",
+      "description": "Library cleanup",
+      "port": "5056",
+      "path": "",
+      "url": "https://jellysweep.unraid.rekabs.com"
+    },
+    {
+      "name": "Tinyauth",
+      "description": "Lightweight auth",
+      "port": "3002",
+      "path": "",
+      "url": "https://tinyauth.unraid.rekabs.com"
+    },
+    {
+      "name": "Pocket ID",
+      "description": "Identity service",
+      "port": "1411",
+      "path": "",
+      "url": "https://sso.unraid.rekabs.com"
+    },
+    {
+      "name": "Portainer",
+      "description": "Container management",
+      "port": "9000",
+      "path": "",
+      "url": "https://portainer.unraid.rekabs.com"
+    },
+    {
+      "name": "PostgreSQL",
+      "description": "Database endpoint",
+      "port": "5432",
+      "path": "",
+      "url": ""
+    }
+  ],
+  "shares": [
+    {
+      "name": "appdata",
+      "path": "/mnt/user/appdata"
+    },
+    {
+      "name": "media",
+      "path": "/mnt/user/Media"
+    },
+    {
+      "name": "shared_storage",
+      "path": "/mnt/user/shared_storage"
+    },
+    {
+      "name": "backups",
+      "path": "/mnt/user/Backups"
+    }
+  ],
+  "auth": {
+    "enabled": false,
+    "providerName": "Pocket ID",
+    "issuer": "https://sso.unraid.rekabs.com",
+    "clientId": "PUBLIC_DEMO_CLIENT_ID",
+    "clientSecret": "PUBLIC_DEMO_CLIENT_SECRET",
+    "redirectUri": "",
+    "postLogoutRedirectUri": "",
+    "scopes": "openid profile email"
+  },
+  "profile": {
+    "displayName": "",
+    "title": "Home Lab Operator",
+    "avatarLabel": ""
+  }
+}

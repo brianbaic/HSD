@@ -1,0 +1,45 @@
+services:
+  dashboard:
+    build: .
+    container_name: unraid-dashboard
+    privileged: true
+    restart: unless-stopped
+    environment:
+      NODE_ENV: production
+      PORT: 3019
+      UPDATE_INTERVAL_MS: 5000
+      STORAGE_REFRESH_MS: 300000
+      CONTAINER_REFRESH_MS: 15000
+      NOTIFICATION_REFRESH_MS: 30000
+      HISTORY_POINTS: 48
+      SHARE_DU_TIMEOUT_MS: 30000
+      DOCKER_SOCKET_PATH: /var/run/docker.sock
+      NOTIFY_BIN: /usr/local/emhttp/webGui/scripts/notify
+      PHP_NOTIFY_ARGS: -d short_open_tag=1
+      MDSTAT_PATH: /proc/mdstat
+      HOST_PROC_DIR: /host/proc
+      HOST_HOSTNAME_PATH: /host/etc/hostname
+      HOST_UNRAID_VERSION_PATH: /host/etc/unraid-version
+      HOST_NOTIFICATIONS_DIR: /host/boot/config/plugins/dynamix/notifications
+      HOST_SYSLOG_PATH: /host/var/log/syslog
+      HOST_EMHTTP_DIR: /host/var/local/emhttp
+      HOST_EMHTTP_DISKS_PATH: /host/var/local/emhttp/disks.ini
+      LSBLK_BIN: lsblk
+      SMARTCTL_BIN: smartctl
+    ports:
+      - "3019:3019"
+    volumes:
+      - ${DASHBOARD_DATA_PATH:-/mnt/user/appdata/home-server-dashboard-data}:/app/data
+      - /mnt:/mnt:ro
+      - /tmp:/tmp
+      - /proc:/host/proc:ro
+      - /sys:/sys:ro
+      - /var/log:/host/var/log:ro
+      - /var/local/emhttp:/host/var/local/emhttp:ro
+      - /boot/config:/host/boot/config
+      - /boot/config:/boot/config
+      - /etc/hostname:/host/etc/hostname:ro
+      - /etc/unraid-version:/host/etc/unraid-version:ro
+      - /usr/local/emhttp:/usr/local/emhttp:ro
+      - /dev:/dev
+      - /var/run/docker.sock:/var/run/docker.sock:ro
